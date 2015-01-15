@@ -1,25 +1,12 @@
 //
-//  main.m
-//  isPermutationTest
+//  File.m
+//  IsPermutation
 //
-//  Created by Jennifer A Sipila on 1/14/15.
+//  Created by Jennifer A Sipila on 1/12/15.
 //  Copyright (c) 2015 Jennifer A Sipila. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
-    return 0;
-}
-
-
-NSString *str1;
-
-NSString *str2;
 
 
 NSString* str1 = @"ABCDE";
@@ -31,13 +18,13 @@ NSString* str2 = @"AEIOU";
 bool isPermutation(NSString* str1, NSString* str2)
 
 {
-    int len1 = strlen(str1);
-    int len2 = strlen(str2);
+    NSInteger len1 = str1.length;
+    NSInteger len2 = str2.length;
     
     
     if (len1 != len2)
     {
-        
+    
         return false;
         
     }
@@ -53,9 +40,13 @@ bool isPermutation(NSString* str1, NSString* str2)
             
             if (Matched [j] == true )
                 
-                Matched[j] = true;
+               Matched[j] = true;
             
             continue;
+            
+            
+            
+            
             
             if (str1[i] == str2[j])
             {
@@ -70,8 +61,8 @@ bool isPermutation(NSString* str1, NSString* str2)
         free(Matched);
         return true;
     }
-    
-    
-    
+
+
+
 }
 
